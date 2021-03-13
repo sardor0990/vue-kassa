@@ -37,7 +37,7 @@
                         <div class="card">
                             <div class="card_body">
                                 <div class="card_title">
-                                    <span>Расход</span>
+                                    <span>Расходы</span>
                                 </div>
                             </div>
                         </div>
