@@ -4,7 +4,7 @@
             <div class="sklad_wrap">
                 <div class="sklad_title">
                     <span >
-                        Поиск и добавление товара 
+                        Поиск и добавление товара
                     </span>
                 </div>
                 <div c>
