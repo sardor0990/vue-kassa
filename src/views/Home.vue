@@ -13,6 +13,8 @@
                                 </div>
                             </div>
                         </router-link>
+
+                        <router-link to="/Static">
                         <div class="card">
                             <div class="card_body">
                                 <div class="card_title">
@@ -20,6 +22,7 @@
                                 </div>
                             </div>
                         </div>
+                        </router-link>
                         <div style="float: right">
                             <div class="b_card">
                                 <div class="b_card_title">
@@ -55,7 +58,7 @@
 
     }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 
     .optional {
         &_wrap {
