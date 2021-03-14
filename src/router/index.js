@@ -17,6 +17,11 @@ const routes = [
         name: 'Static',
     component: () => import('../views/Static.vue')
 },
+{
+    path: '/Static/Costs',
+        name: 'Costs',
+    component: () => import('../views/Costs.vue')
+},
 ]
 
 const router = createRouter({

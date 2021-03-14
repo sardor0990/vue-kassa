@@ -2,12 +2,21 @@
     <div id="static">
         <div class="static">
             <div class="static_wrap">
-                <div class="row" style="display: flex;">
+                <div class="row">
                     <div class="col">
+                       <router-link to="/Static/Costs" style="text-decoration: none">
                         <div class="card">
                             <div class="card_body">
                                 <div class="card_title">
-                                    <span> Заказы</span>
+                                    <span> Расходы</span>
+                                </div>
+                            </div>
+                        </div>
+                       </router-link>
+                        <div class="card">
+                            <div class="card_body">
+                                <div class="card_title">
+                                    <span> Прибыль</span>
                                 </div>
                             </div>
                         </div>
@@ -15,15 +24,7 @@
                         <div class="card">
                             <div class="card_body">
                                 <div class="card_title">
-                                    <span> Заказы</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card_body">
-                                <div class="card_title">
-                                    <span> Заказы</span>
+                                    <span> Скупает</span>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +34,7 @@
                         <div class="card">
                             <div class="card_body">
                                 <div class="card_title">
-                                    <span> Заказы</span>
+                                    <span> Доходы</span>
                                 </div>
                             </div>
                         </div>
@@ -41,7 +42,7 @@
                         <div class="card">
                             <div class="card_body">
                                 <div class="card_title">
-                                    <span> Заказы</span>
+                                    <span> Прибыль</span>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +50,7 @@
                         <div class="card">
                             <div class="card_body">
                                 <div class="card_title">
-                                    <span> Заказы</span>
+                                    <span> Реализация</span>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +96,7 @@
         background: #0069d9;
         border-radius: 20px;
         padding: auto;
-        height: 100px;
+        height: 200px;
         margin-left: 30px;
         margin-top: 30px;
         color: white;
@@ -103,10 +104,11 @@
         &_title {
             text-align: center;
             font-size: 24px;
-            margin: 30px 0;
+            margin: 70px 0;
             color: white;
             font-family: sans-serif;
         }
     }
+
 
 </style>
