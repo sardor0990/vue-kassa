@@ -11,7 +11,12 @@ const routes = [
     path: '/Sclad',
     name: 'Sclad',
     component: () => import('../views/Sclad.vue')
-  }
+  },
+{
+    path: '/Static',
+        name: 'Static',
+    component: () => import('../views/Static.vue')
+},
 ]
 
 const router = createRouter({
