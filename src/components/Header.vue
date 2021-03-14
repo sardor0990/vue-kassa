@@ -24,7 +24,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .header {
         &_wrap {
             width: 100%;
