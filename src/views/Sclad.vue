@@ -3,12 +3,15 @@
         <div class="sklad">
             <div class="sklad_wrap">
                 <div class="sklad_title">
-                    <span >
+                    <span>
                         Поиск и добавление товара
                     </span>
                 </div>
-                <div c>
-
+                <div class="searching">
+                    <div class="search">
+                        <input type="text">
+                        <button class="btn"></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,10 +24,10 @@
     }
 </script>
 
-<style lang="scss">
-    .sklad{
-        &_title{
-           padding: 30px 40px;
+<style lang="scss" scoped>
+    .sklad {
+        &_title {
+            padding: 30px 40px;
             font-size: 40px;
             font-family: sans-serif;
         }
