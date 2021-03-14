@@ -17,6 +17,11 @@ const routes = [
         name: 'Static',
     component: () => import('../views/Static.vue')
 },
+    {
+        path: '/Add',
+        name: 'Add',
+        component: () => import('../views/Add.vue')
+    },
 ]
 
 const router = createRouter({
