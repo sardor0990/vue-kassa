@@ -66,7 +66,7 @@
             width: 1200px;
             margin-right: auto;
             margin-left: auto;
-
+            padding-top: 90px;
             &_row {
                 display: flex;
                 align-items: center;
@@ -119,8 +119,8 @@
     }
 
     .b_card {
-        width: 300px;
-        height: 650px;
+        width: 340px;
+        height: 630px;
         margin-top: 30px;
         background: green;
         margin-left: 30px;

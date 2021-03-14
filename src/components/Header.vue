@@ -28,7 +28,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .header {
         &_wrap {
             width: 100%;
@@ -43,7 +43,7 @@
                         width: 50px;
                         color: white;
                         border-radius: 15px;
-                        padding: 10px 30px;
+                        padding: 30px 40px;
                         cursor: pointer;
                         &:hover {
                             background:#0069d9;
@@ -57,7 +57,7 @@
                         width: 43px;
                         color: white;
                         border-radius: 15px;
-                        padding: 10px 30px;
+                        padding: 30px 40px;
                         cursor: pointer;
                         &:hover {
                             background: #0069d9;
@@ -72,7 +72,7 @@
     width: 50px;
     color: white;
     border-radius: 15px;
-    padding: 10px 27px;
+    padding: 30px 40px;
     margin-right: 10px;
     cursor: pointer;
     &:hover {
