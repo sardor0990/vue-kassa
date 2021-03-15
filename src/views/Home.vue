@@ -1,53 +1,6 @@
 <template>
-    <div id="optional">
-        <div class="optional">
-            <div class="optional_wrap">
-                <div class="row">
-                    <div>
-                        <router-link to="/Sclad">
-                            <div class="card">
-                                <div class="card_body">
-                                    <div class="card_title">
-                                        <span> Склад</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </router-link>
+    <div>
 
-                        <router-link to="/Static">
-                        <div class="card">
-                            <div class="card_body">
-                                <div class="card_title">
-                                    <span>Статистика</span>
-                                </div>
-                            </div>
-                        </div>
-                        </router-link>
-                        <div style="float: right">
-                            <div class="b_card">
-                                <div class="b_card_title">
-                                    <span>Покупка</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_body">
-                                <div class="card_title">
-                                    <span> Заказы</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_body">
-                                <div class="card_title">
-                                    <span>Расходы</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </template>
 
