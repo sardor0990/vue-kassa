@@ -11,55 +11,60 @@
                     <div class="creative">
                         <div class="search">
                             <input type="text" placeholder="Поиск">
-                            <div class="search_btn"><i class="far fa-search"></i> Поиск</div>
-                        </div>
-                        <div class="add">
-                            <div class="add_input_btn">
-                                <router-link to="/add">
-                                    <div class="add_btn"><i class="fas fa-plus"></i> Добавить товар</div>
-                                </router-link>
+                            <div class="btn_block">
+                                <div class="add_input_btn">
+                                    <div class="search_btn"><i class="far fa-search"></i> Поиск</div>
+                                </div>
+                                <div class="add">
+                                    <div class="add_input_btn">
+                                        <router-link to="/add">
+                                            <div class="add_btn"><i class="fas fa-plus"></i> Добавить товар</div>
+                                        </router-link>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="elem">
-            <div class="elem_wrap">
-                <div class="element_wrap_row">
-                    <div class="flex_box">
-                        <div class="table_block">
-                            <table class="table">
-                                <tr class="table_row">
-                                    <th class="table_data">Наименовая</th>
-                                    <th class="table_data">Номер</th>
-                                    <th class="table_data">сумма</th>
-                                </tr>
-                                <tr @click="openObj(index)" class="table_row" v-for="(item, index) in tovar" :key="index">
-                                    <td class="table_data">{{item.name}}</td>
-                                    <td class="table_data">{{item.id}}</td>
-                                    <td class="table_data">{{item.prise}}</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="table_block">
-                            <table class="table">
-                                <tr class="table_row">
-                                    <th class="table_data">Наименовая</th>
-                                    <th class="table_data">Номер</th>
-                                    <th class="table_data">сумма</th>
-                                    <th class="table_data">Картинка</th>
-                                    <th class="table_data">Описание</th>
-                                </tr>
-                                <tr class="table_row">
-                                    <th class="table_data">{{obj.name}}</th>
-                                    <th class="table_data">{{obj.id}}</th>
-                                    <th class="table_data">{{obj.prise}}</th>
-                                    <th class="table_data"><img :src="obj.img" alt=""></th>
-                                    <th class="table_data">{{obj.disc}}</th>
-                                </tr>
-                            </table>
+                <div class="elem">
+                    <div class="elem_wrap">
+                        <div class="element_wrap_row">
+                            <div class="flex_box">
+                                <div class="table_block">
+                                    <table class="table">
+                                        <tr class="table_row">
+                                            <th class="table_data">Наименовая</th>
+                                            <th class="table_data">Номер</th>
+                                            <th class="table_data">сумма</th>
+                                        </tr>
+                                        <tr @click="openObj(index)" class="table_row" v-for="(item, index) in tovar"
+                                            :key="index">
+                                            <td class="table_data">{{item.name}}</td>
+                                            <td class="table_data">{{item.id}}</td>
+                                            <td class="table_data">{{item.prise}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="table_block">
+                                    <table class="table">
+                                        <tr class="table_row">
+                                            <th class="table_data">Наименовая</th>
+                                            <th class="table_data">Номер</th>
+                                            <th class="table_data">сумма</th>
+                                            <th class="table_data hide">Картинка</th>
+                                            <th class="table_data hide">Описание</th>
+                                        </tr>
+                                        <tr class="table_row">
+                                            <th class="table_data">{{obj.name}}</th>
+                                            <th class="table_data">{{obj.id}}</th>
+                                            <th class="table_data">{{obj.prise}}</th>
+                                            <th class="table_data hide"><img :src="obj.img" alt=""></th>
+                                            <th class="table_data hide">{{obj.disc}}</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -75,9 +80,9 @@
         data() {
             return {
                 obj: {
-                    name:"",
-                    id:"",
-                    prise:"",
+                    name: "",
+                    id: "",
+                    prise: "",
                     img: "",
                     disc: "",
                 },
@@ -116,7 +121,7 @@
         },
         methods: {
             openObj(index) {
-                console.log(this.obj=this.tovar[index])
+                console.log(this.obj = this.tovar[index])
             }
         }
     }
@@ -137,6 +142,7 @@
 
     .search {
         display: flex;
+        flex-direction: row;
 
         & input {
             border-radius: 10px;
@@ -155,6 +161,7 @@
         &_btn {
             background: none;
             padding: 12px 20px;
+            width: 80px;
             border-radius: 10px;
             margin-left: 15px;
             color: white;
@@ -162,6 +169,10 @@
             font-size: 15px;
             outline: none;
             cursor: pointer;
+
+            &:hover {
+                background: #0062cc;
+            }
         }
     }
 
@@ -177,6 +188,11 @@
     }
 
     .creative {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn_block {
         display: flex;
     }
 
@@ -207,6 +223,10 @@
             font-size: 15px;
             outline: none;
             cursor: pointer;
+
+            &:hover {
+                background: #0062cc;
+            }
         }
     }
 
@@ -237,12 +257,13 @@
 
     .table_block {
         width: 100%;
-        &:first-child .table{
+
+        &:first-child .table {
             width: 80%;
         }
     }
 
-    .table{
+    .table {
         border-collapse: collapse;
         width: 100%;
 
@@ -254,21 +275,61 @@
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
-            & img{
+
+            & img {
                 width: 130px;
                 height: 130px;
             }
         }
-        &:last-child{
+
+        &:last-child {
             width: 100%;
         }
     }
-
+.hide{
+    display: table-cell;
+}
 
     @media screen and (max-width: 768px) {
+        .hide{
+            display: none;
+        }
         .sklad_title {
             font-size: 25px;
+            margin-bottom: 20px;
         }
+        .flex_box {
+            flex-direction: column;
+        }
+        .table_block {
+            width: 100%;
+
+            &:first-child .table {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        .search {
+            flex-direction: column;
+
+            &_btn {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+        .add {
+            margin: 20px 0;
+            padding: 0;
+            &_input_btn{
+                margin-right: 10px;
+            }
+        }
+    }
+    .add_input_btn {
+        width: 120px;
+    }
+    .creative {
+        flex-direction: column;
     }
 
     @media screen and (max-width: 576px) {

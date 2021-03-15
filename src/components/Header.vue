@@ -4,14 +4,16 @@
             <div class="header_wrap">
                 <div class="header_wrap_cont">
                     <div class="header_wrap_cont_btn">
-                        <router-link to="/"> <div class="btn_main">Главная</div></router-link>
+                        <router-link style="text-decoration: none" to="/"><div class="btn">Назад</div></router-link>
+                    </div>
+                    <div class="header_wrap_cont_btn">
+                        <router-link style="text-decoration: none" to="/Sclad"><div class="btn">Cклад</div></router-link>
                     </div>
                     <div class="header_wrap_cont_btn left">
-                        <div class="btn_rigth">Admin</div>
+                        <router-link to="/Static" style="text-decoration: none"> <div class="btn">Статистика</div></router-link>
                     </div>
-
                     <div class="header_wrap_cont_btn right">
-                        <div class="btn_left">Касса</div>
+                        <router-link to="/Exp" style="text-decoration: none">  <div class="btn">Затраты</div>  </router-link>
                     </div>
                 </div>
             </div>
@@ -32,62 +34,30 @@
     .header {
         &_wrap {
             width: 100%;
+
             &_cont {
                 display: flex;
-
-                &_btn.left {
-                    margin-right: auto;
-
-                    & .btn_rigth {
-                        background: #007bff;
-                        width: 50px;
-                        color: white;
-                        border-radius: 15px;
-                        padding: 30px 40px;
-                        cursor: pointer;
-                        &:hover {
-                            background:#0069d9;
-                        }
-                    }
-                }
-
-                &_btn.right {
-                    & .btn_left {
-                        background: #007bff;
-                        width: 43px;
-                        color: white;
-                        border-radius: 15px;
-                        padding: 30px 40px;
-                        cursor: pointer;
-                        &:hover {
-                            background: #0069d9;
-                        }
-                    }
+                &_btn{
+                    width: 100%;
                 }
             }
         }
     }
-.btn_main{
+.btn {
     background: #007bff;
-    width: 50px;
+    text-align: center;
+    padding: 50px;
+    font-size: 30px;
     color: white;
-    border-radius: 15px;
-    padding: 30px 40px;
-    margin-right: 10px;
-    cursor: pointer;
-    &:hover {
+    border: 1px solid white;
+    border-radius: 25px;
+    &:hover{
         background: #0069d9;
     }
 }
-    .btn {
-        background: #0069d9;
-        width: 80px;
-        color: white;
-        border-radius: 15px;
-        padding: 15px;
-        &:hover {
-            background: #0069d9;
-        }
+@media screen and (max-width: 768px){
+    .header_wrap_cont{
+        flex-direction: column;
     }
-
+}
 </style>
