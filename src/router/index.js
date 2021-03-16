@@ -6,6 +6,7 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home
+
     },
     {
         path: '/Sclad',
@@ -32,6 +33,12 @@ const routes = [
         name: 'Exp',
         component: () => import('../views/Exp.vue')
     },
+    {
+        path:'/Userpage',
+        name:'Userpage',
+        component:()=>import('../views/Userpage.vue')
+
+    }
 ];
 
 const router = createRouter({
