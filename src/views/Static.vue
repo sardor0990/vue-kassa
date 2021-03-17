@@ -4,30 +4,30 @@
             <div class="static_wrap">
                 <div class="row" style="display: flex;">
                     <div class="col">
-                        <div class="card">
-                            <div class="card_body">
-                                <div class="card_title">
-                                    <span> Заказы</span>
+                        <div class="count">
+                            <div class="count_body">
+                                <div class="count_title">
+                                    <span>55555</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card">
-                            <div class="card_body">
-                                <div class="card_title">
-                                    <span> Заказы</span>
+                        <div class="count">
+                            <div class="count_body">
+                                <div class="count_title">
+                                    <span>5555555</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card">
-                            <div class="card_body">
-                                <div class="card_title">
-                                    <span> Заказы</span>
+                        <div class="count third__count">
+                            <div class="count_body">
+                                <div class="count_title">
+                                    <span>55555</span>
                                 </div>
                             </div>
                         </div>
@@ -320,27 +320,40 @@
         justify-content: center;
     }
 
-    .card {
-
+    .count{
         width: 380px;
-        border: 1px solid black;
-        background: #0069d9;
-        border-radius: 20px;
+        border-right: 1px solid black;
         padding: auto;
         height: 100px;
         margin-left: 30px;
         margin-top: 30px;
-        color: white;
+        color: black;
+        text-align: center;
 
         &_title {
             text-align: center;
             font-size: 24px;
             margin: 30px 0;
-            color: white;
+            color: black;
             font-family: sans-serif;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
+        span{
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+        }
+
     }
 
+
+    .third__count{
+        border: none;
+    }
     /* CALENDAR CSS */
 
     [type="date"] {
