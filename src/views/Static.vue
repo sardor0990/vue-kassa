@@ -38,7 +38,6 @@
                     <div class="col">
                         <input type="date" name="dateofbirth" id="dateofbirth" class="mb date_input">
                     </div>
-
                     <div class="col second__row__second__col">
                         <input type="date" name="dateofbirth" id="dateofbirth" class="mb date_input">
                     </div>
