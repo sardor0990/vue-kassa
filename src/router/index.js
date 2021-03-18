@@ -33,12 +33,24 @@ const routes = [
         name: 'Exp',
         component: () => import('../views/Exp.vue')
     },
+{
+    path: '/Order',
+        name: 'Order',
+    component: () => import('../views/Order.vue')
+},
+{
+    path: '/User',
+        name: 'User',
+    component: () => import('../views/User.vue')
+},
+
     {
         path:'/Userpage',
         name:'Userpage',
         component:()=>import('../views/Userpage.vue')
 
     }
+
 ];
 
 const router = createRouter({
