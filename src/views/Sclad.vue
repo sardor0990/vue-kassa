@@ -115,7 +115,6 @@
                         img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
                         count: "1",
                     },
-
                 ],
             }
         },
@@ -129,7 +128,6 @@
 
 <style lang="scss" scoped>
     .sklad {
-
         &_wrap {
             margin-top: 20px;
         }
@@ -154,7 +152,6 @@
 
             &::placeholder {
                 font-size: 20px;
-
             }
         }
 
@@ -246,7 +243,6 @@
         display: flex;
         justify-content: space-around;
         font-size: 30px;
-
     }
 
     .flex_box {
