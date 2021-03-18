@@ -60,7 +60,7 @@
                                             <th class="table_data">{{obj.id}}</th>
                                             <th class="table_data">{{obj.prise}}</th>
                                             <th class="table_data hide"><img :src="obj.img" alt=""></th>
-                                            <th class="table_data hide">{{obj.disc}}</th>
+                                            <th class="table_data hide">{{obj.count}}</th>
                                         </tr>
                                     </table>
                                 </div>
@@ -84,7 +84,7 @@
                     id: "",
                     prise: "",
                     img: "",
-                    disc: "",
+                    count: "",
                 },
                 tovar: [
                     {
@@ -92,28 +92,28 @@
                         name: "tarelka",
                         prise: "1",
                         img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
-                        disc: "1",
+                        count: "1",
                     },
                     {
                         id: 9813569,
                         name: "tarelka",
                         prise: "2",
                         img: "https://www.google.com/search?q=%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8&safe=active&sxsrf=ALeKk03DZ1tav_pK3_DuDvtwrUCjGIwMug:1615742461222&source=lnms&tbm=isch&biw=1920&bih=969#imgrc=HnhKplPWRplAkM",
-                        disc: "1",
+                        count: "1",
                     },
                     {
                         id: 9813569,
                         name: "tarelka",
                         prise: "3",
                         img: "https://st2.depositphotos.com/3364363/5972/i/600/depositphotos_59728757-stock-photo-waiting-for-a-new-day.jpg",
-                        disc: "1",
+                        count: "1",
                     },
                     {
                         id: 9813569,
                         name: "tarelka",
                         prise: "4",
                         img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
-                        disc: "1",
+                        count: "1",
                     },
 
                 ],
@@ -161,7 +161,7 @@
         &_btn {
             background: none;
             padding: 12px 20px;
-            width: 80px;
+            width: 65px;
             border-radius: 10px;
             margin-left: 15px;
             color: white;
@@ -266,6 +266,7 @@
     .table {
         border-collapse: collapse;
         width: 100%;
+        text-align: center;
 
         &_row:nth-child(even) {
             background-color: #dddddd;
@@ -273,9 +274,7 @@
 
         &_data {
             border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-
+            text-align: center;
             & img {
                 width: 130px;
                 height: 130px;
@@ -286,12 +285,13 @@
             width: 100%;
         }
     }
-.hide{
-    display: table-cell;
-}
+
+    .hide {
+        display: table-cell;
+    }
 
     @media screen and (max-width: 768px) {
-        .hide{
+        .hide {
             display: none;
         }
         .sklad_title {
@@ -320,14 +320,17 @@
         .add {
             margin: 20px 0;
             padding: 0;
-            &_input_btn{
+
+            &_input_btn {
                 margin-right: 10px;
             }
         }
     }
+
     .add_input_btn {
         width: 120px;
     }
+
     .creative {
         flex-direction: column;
     }
