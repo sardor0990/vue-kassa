@@ -3,7 +3,7 @@
         <div class="login background">
             <div class="login_wrap">
                 <div class="row">
-                    <div class="login__column" style="border: 1px solid #ff9900;">
+                    <div class="login__column" style="border: 1px solid #0069d9;">
                         <div class="form__container">
                             <form>
                                 <div class="form__input">
@@ -38,11 +38,7 @@
           }
         },
         methods:{
-//            submit__form(){
-//                if(!this.form.name){
-//
-//                }
-//            }
+
         },
     }
 </script>
@@ -50,7 +46,6 @@
 <style lang="scss" scoped>
 
     .background{
-        background: gold;
         height: 100vh;
     }
     .login {
@@ -78,7 +73,6 @@
         border-radius: 20px;
         width: 300px;
         margin-top: 150px;
-        background: #ff9900;
     }
 
     .form__container {
