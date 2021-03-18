@@ -21,25 +21,33 @@
                                     <td>asdasd</td>
                                     <td>asdasdasd</td>
                                     <td>55757</td>
-                                    <td><button>Добавить</button></td>
+                                    <td>
+                                        <button>Добавить</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>asdasd</td>
                                     <td>asdasdasd</td>
                                     <td>55757</td>
-                                    <td><button>Добавить</button></td>
+                                    <td>
+                                        <button>Добавить</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>asdasd</td>
                                     <td>asdasdasd</td>
                                     <td>55757</td>
-                                    <td><button>Добавить</button></td>
+                                    <td>
+                                        <button>Добавить</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>asdasd</td>
                                     <td>asdasdasd</td>
                                     <td>55757</td>
-                                    <td><button>Добавить</button></td>
+                                    <td>
+                                        <button>Добавить</button>
+                                    </td>
                                 </tr>
 
 
@@ -57,29 +65,45 @@
                                     <th>Удалить</th>
                                 </tr>
                                 <tr>
-                                    <td><button class="percent_button">%</button></td>
+                                    <td>
+                                        <button class="percent_button" @click="showModal=true">%</button>
+                                    </td>
                                     <td>asdasdasd</td>
                                     <td>55757</td>
-                                    <td><button class="delete_button">delete</button></td>
+                                    <td>
+                                        <button class="delete_button">delete</button>
+                                    </td>
                                 </tr>
 
                                 <tr>
-                                    <td><button class="percent_button">%</button></td>
+                                    <td>
+                                        <button class="percent_button">%</button>
+                                    </td>
                                     <td>asdasdasd</td>
                                     <td>55757</td>
-                                    <td><button class="delete_button">delete</button></td>
+                                    <td>
+                                        <button class="delete_button">delete</button>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><button class="percent_button">%</button></td>
+                                    <td>
+                                        <button class="percent_button">%</button>
+                                    </td>
                                     <td>asdasdasd</td>
                                     <td>55757</td>
-                                    <td><button class="delete_button">delete</button></td>
+                                    <td>
+                                        <button class="delete_button">delete</button>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><button class="percent_button">%</button></td>
+                                    <td>
+                                        <button class="percent_button">%</button>
+                                    </td>
                                     <td>asdasdasd</td>
                                     <td>55757</td>
-                                    <td><button class="delete_button">delete</button></td>
+                                    <td>
+                                        <button class="delete_button">delete</button>
+                                    </td>
                                 </tr>
 
 
@@ -87,12 +111,18 @@
                         </div>
 
                         <div class="last__btns">
-                            <div class="last__btns__chek__button" @click="showModal=true">chek</div>
+                            <div class="last__btns__chek__button"
+                                 @click="showChek=true; ">chek
+                            </div>
+
 
                             <div class="last__btns__count">14555</div>
+                            <div id="demo"></div>
                         </div>
                     </div>
                 </div>
+
+                <!--procent modal-->
 
                 <transition name="fade" appear>
                     <div class="modal-overlay" v-if="showModal" @click="showModal=false">
@@ -111,6 +141,22 @@
                         </div>
                     </div>
                 </transition>
+                <!--check modal-->
+
+                <transition name="fade" appear>
+                    <div class="modal-overlay" v-if="showChek" @click="showChek=false">
+                    </div>
+                </transition>
+
+                <transition name="slide" appear>
+                    <div class="modal" v-if="showChek">
+                        <div style="text-align: center; margin-top: 10px;">
+                            <button @click="showChek=false" style="padding: 10px; margin-right: 100px;">Отправить
+                            </button>
+                            <button @click="showChek=false" style="padding: 10px">Отмена</button>
+                        </div>
+                    </div>
+                </transition>
             </div>
         </div>
     </div>
@@ -121,9 +167,14 @@
         name: "User",
         data() {
             return {
-                showModal: true,
+                showModal: false,
+                showChek: true,
             }
+
+
         },
+
+
 
     }
 </script>
@@ -151,19 +202,19 @@
         margin-top: 30px;
     }
 
-    .first__column{
+    .first__column {
         text-align: center;
 
-        table, td, th{
+        table, td, th {
             border: 1px solid black;
         }
 
-        table{
+        table {
             width: 100%;
             border-collapse: collapse;
             background: #ffffff;
 
-            td button{
+            td button {
                 padding: 10px;
                 background: #007bff;
                 border-radius: 4px;
@@ -172,12 +223,12 @@
             }
         }
 
-        th, td{
+        th, td {
             padding: 20px;
         }
 
-        .first__column__inner{
-            input{
+        .first__column__inner {
+            input {
                 border-radius: 10px;
                 height: 30px;
                 width: 250px;
@@ -186,12 +237,12 @@
                 outline: none;
                 margin-bottom: 30px;
 
-                &::placeholder{
+                &::placeholder {
                     font-size: 20px;
                 }
             }
 
-            button{
+            button {
                 background: none;
                 padding: 12px 20px;
                 border-radius: 10px;
@@ -204,7 +255,7 @@
             }
         }
 
-        .table__content{
+        .table__content {
             overflow-y: scroll;
             height: 300px;
             border: 1px solid black;
@@ -214,62 +265,62 @@
         }
     }
 
-    .second__column{
+    .second__column {
         margin-left: 134px;
-        margin-top: 110px;
+        margin-top: 50px;
 
-        .second__column__inner{
+        .second__column__inner {
             overflow-y: scroll;
             height: 300px;
             background: grey;
             padding: 0px 20px 20px 20px;
 
         }
-        table, td, th{
+        table, td, th {
             border: 1px solid black;
         }
 
-        table{
+        table {
             width: 100%;
             border-collapse: collapse;
             background: #ffffff;
         }
 
-        th, td{
+        th, td {
             padding: 20px;
         }
     }
 
-    .percent_button{
+    .percent_button {
         padding: 5px 20px;
         background: #007bff;
         color: #ffffff;
     }
 
-    .delete_button{
+    .delete_button {
         padding: 5px 20px;
         background: red;
         color: #ffffff;
     }
 
-    .last__btns{
+    .last__btns {
         margin-top: 20px;
         display: flex;
         justify-content: space-around;
 
-        .last__btns__chek__button{
+        .last__btns__chek__button {
             border: 1px solid #007bff;
             padding: 20px 40px;
             background: #007bff;
             color: #ffffff;
             display: inline-block;
             cursor: pointer;
-            &:hover{
+            &:hover {
                 background: lightgreen;
             }
         }
-        
-        .last__btns__count{
+
+        .last__btns__count {
             border: 1px solid #007bff;
             padding: 20px 40px;
             color: #ffffff;
@@ -277,12 +328,6 @@
             background: #00bff5;
         }
     }
-
-
-
-
-
-
 
     /*MODAL*/
     .modal-overlay {
@@ -329,25 +374,24 @@
         transform: translateY(-50%) translateX(100vw);
     }
 
-
-    .modal__inner__content{
+    .modal__inner__content {
         border: 1px solid black;
         padding: 20px 40px;
         display: inline-block;
-        margin:  0 10px;
+        margin: 0 10px;
         color: black;
         cursor: pointer;
     }
 
-    .red{
+    .red {
         background: red;
     }
 
-    .yellow{
+    .yellow {
         background: yellow;
     }
 
-    .green{
+    .green {
         background: green;
     }
 

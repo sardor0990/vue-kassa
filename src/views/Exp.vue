@@ -234,7 +234,7 @@
 &_sum{
     align-self: center;
     width: 30%;
-    margin-right: 50px;
+    margin-right: 20px;
 }
         &_block {
 
@@ -244,7 +244,7 @@
             border-radius: 10px;
             height: 30px;
             width: 250px;
-            padding: 3px 20px;
+            padding: 3px 15px;
             font-size: 20px;
             outline: none;
         }
@@ -285,17 +285,17 @@
         width: 500px;
         padding: 20px 10px;
         outline: none;
-        height: 600px;
+        height: 400px;
         font-size: 30px;
         text-align: center;
         &_block{
-            margin-right: 20px;
+            margin-right: 10px;
             width: 60%;
         }
     }
     .table_block {
         width: 100%;
-        height: 600px;
+        height: 400px;
     }
 
     .table{

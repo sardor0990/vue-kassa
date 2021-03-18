@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="row third__row" style=" position:relative;">
-                    <div class="col first__column" style="width: 80%; height:  500px;">
+                    <div class="col first__column" style="width: 80%; height:  300px; margin-right: 10px;">
                         <table style="width: 100%;">
                             <tr>
                                 <th>-</th>
@@ -71,7 +71,7 @@
 
                     <div class="col" style="position:absolute; top: 0; right: 0; padding-right: 10px;">
                         <button type="submit" class="btn btn-success">
-                            <i class="fas fa-search"></i> Filter
+                            <i class="fas fa-sliders-h"></i> Филтр
                         </button>
                     </div>
                 </div>
@@ -323,19 +323,18 @@
         width: 380px;
         border-right: 1px solid black;
         padding: auto;
-        height: 100px;
         margin-left: 30px;
-        margin-top: 30px;
+
         color: black;
         text-align: center;
 
         &_title {
             text-align: center;
             font-size: 24px;
-            margin: 30px 0;
+            margin: 20px 0;
             color: black;
             font-family: sans-serif;
-            height: 100px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -374,6 +373,7 @@
         padding: 10px 5px;
         box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
         width: 190px;
+        font-size: 20px;
     }
 
     .submit {
@@ -386,7 +386,7 @@
     }
 
     .second__row {
-        margin: 50px 0;
+        margin: 20px 0;
     }
 
     .second__row__second__col {

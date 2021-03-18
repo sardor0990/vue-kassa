@@ -235,7 +235,7 @@
             margin-top: 30px;
             width: 100%;
             margin-right: auto;
-            height: 500px;
+            height: 200px;
         }
 
         &_row {

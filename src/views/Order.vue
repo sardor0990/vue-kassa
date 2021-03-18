@@ -97,7 +97,7 @@
     #order {
         width: 100vw;
         position: relative; /*  agar buni ochirsa overlay header ustidan boladi  */
-        height: 100vh;
+        height: 80%;
     }
 
     .order {
@@ -123,7 +123,7 @@
 
     .first__column {
         width: 300px;
-        margin-top: 50px;
+        margin-top: 10px;
     }
 
     .name__of__order {
