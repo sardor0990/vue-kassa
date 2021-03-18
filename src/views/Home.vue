@@ -1,50 +1,7 @@
 <template>
-    <div id="optional">
-        <div class="optional">
-            <div class="optional_wrap">
-                <div class="row">
-                    <div>
-                        <router-link to="/Sclad">
-                            <div class="card">
-                                <div class="card_body">
-                                    <div class="card_title">
-                                        <span> Склад</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </router-link>
-                        <div class="card">
-                            <div class="card_body">
-                                <div class="card_title">
-                                    <span>Статистика</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="float: right">
-                            <div class="b_card">
-                                <div class="b_card_title">
-                                    <span>Покупка</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_body">
-                                <div class="card_title">
-                                    <span> Заказы</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_body">
-                                <div class="card_title">
-                                    <span>Расход</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div>
+
+
     </div>
 </template>
 
@@ -63,7 +20,7 @@
             width: 1200px;
             margin-right: auto;
             margin-left: auto;
-
+            padding-top: 90px;
             &_row {
                 display: flex;
                 align-items: center;
@@ -116,8 +73,8 @@
     }
 
     .b_card {
-        width: 300px;
-        height: 650px;
+        width: 340px;
+        height: 630px;
         margin-top: 30px;
         background: green;
         margin-left: 30px;
