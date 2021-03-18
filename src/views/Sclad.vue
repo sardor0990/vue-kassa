@@ -271,7 +271,6 @@
         &_data {
             border: 1px solid #dddddd;
             text-align: center;
-
             & img {
                 width: 130px;
                 height: 130px;
