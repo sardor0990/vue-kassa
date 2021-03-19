@@ -18,7 +18,11 @@
                                 <div class="add">
                                     <div class="add_input_btn">
                                         <router-link to="/add">
-                                            <div class="add_btn"><i class="fas fa-plus"></i> Добавить товар</div>
+                                            <div class="add_input_btn">
+                                                <div class="add_btn"><i class="fas fa-plus"></i>
+                                                    <span> Добавить товар</span>
+                                                </div>
+                                            </div>
                                         </router-link>
                                     </div>
                                 </div>
@@ -37,30 +41,36 @@
                                             <th class="table_data">Наименовая</th>
                                             <th class="table_data">Номер</th>
                                             <th class="table_data">сумма</th>
+                                            <th class="table_data">Удалить</th>
                                         </tr>
                                         <tr @click="openObj(index)" class="table_row" v-for="(item, index) in tovar"
                                             :key="index">
                                             <td class="table_data">{{item.name}}</td>
                                             <td class="table_data">{{item.id}}</td>
                                             <td class="table_data">{{item.prise}}</td>
+                                            <td class="table_data">
+                                                <button class="remove">
+                                                    <i class="fas fa-trash-alt"></i> удалить
+                                                </button>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>
-                                <div class="table_block">
-                                    <table class="table">
-                                        <tr class="table_row">
-                                            <th class="table_data">Наименовая</th>
-                                            <th class="table_data">Номер</th>
-                                            <th class="table_data">сумма</th>
-                                            <th class="table_data hide">Картинка</th>
-                                            <th class="table_data hide">Описание</th>
+                                <div class="show">
+                                    <table class="show_table">
+                                        <tr class="show_table_row">
+                                            <th class="show_table_row_data">Наименовая</th>
+                                            <th class="show_table_row_data">Номер</th>
+                                            <th class="show_table_row_data">Цена</th>
+                                            <th class="show_table_row_data hide">Картинка</th>
+                                            <th class="show_table_row_data hide">Колличество</th>
                                         </tr>
-                                        <tr class="table_row">
-                                            <th class="table_data">{{obj.name}}</th>
-                                            <th class="table_data">{{obj.id}}</th>
-                                            <th class="table_data">{{obj.prise}}</th>
-                                            <th class="table_data hide"><img :src="obj.img" alt=""></th>
-                                            <th class="table_data hide">{{obj.count}}</th>
+                                        <tr class="show_table_row">
+                                            <th class="show_table_row_data">{{obj.name}}</th>
+                                            <th class="show_table_row_data">{{obj.id}}</th>
+                                            <th class="show_table_row_data">{{obj.prise}}</th>
+                                            <th class="show_table_row_data hide"><img :src="obj.img" alt=""></th>
+                                            <th class="show_table_row_data hide">{{obj.count}}</th>
                                         </tr>
                                     </table>
                                 </div>
@@ -97,24 +107,87 @@
                     {
                         id: 9813569,
                         name: "tarelka",
-                        prise: "2",
-                        img: "https://www.google.com/search?q=%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8&safe=active&sxsrf=ALeKk03DZ1tav_pK3_DuDvtwrUCjGIwMug:1615742461222&source=lnms&tbm=isch&biw=1920&bih=969#imgrc=HnhKplPWRplAkM",
-                        count: "1",
-                    },
-                    {
-                        id: 9813569,
-                        name: "tarelka",
-                        prise: "3",
-                        img: "https://st2.depositphotos.com/3364363/5972/i/600/depositphotos_59728757-stock-photo-waiting-for-a-new-day.jpg",
-                        count: "1",
-                    },
-                    {
-                        id: 9813569,
-                        name: "tarelka",
-                        prise: "4",
+                        prise: "1",
                         img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
                         count: "1",
                     },
+                    {
+                        id: 9813569,
+                        name: "tarelka",
+                        prise: "1",
+                        img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
+                        count: "1",
+                    },
+                    {
+                        id: 9813569,
+                        name: "tarelka",
+                        prise: "1",
+                        img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
+                        count: "1",
+                    },
+                    {
+                        id: 9813569,
+                        name: "tarelka",
+                        prise: "1",
+                        img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
+                        count: "1",
+                    },
+                    {
+                        id: 9813569,
+                        name: "tarelka",
+                        prise: "1",
+                        img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
+                        count: "1",
+                    },{
+                        id: 9813569,
+                        name: "tarelka",
+                        prise: "1",
+                        img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
+                        count: "1",
+                    },{
+                        id: 9813569,
+                        name: "tarelka",
+                        prise: "1",
+                        img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
+                        count: "1",
+                    },{
+                        id: 9813569,
+                        name: "tarelka",
+                        prise: "1",
+                        img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
+                        count: "1",
+                    },{
+                        id: 9813569,
+                        name: "tarelka",
+                        prise: "1",
+                        img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
+                        count: "1",
+                    },{
+                        id: 9813569,
+                        name: "tarelka",
+                        prise: "1",
+                        img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
+                        count: "1",
+                    },{
+                        id: 9813569,
+                        name: "tarelka",
+                        prise: "1",
+                        img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
+                        count: "1",
+                    },{
+                        id: 9813569,
+                        name: "tarelka",
+                        prise: "1",
+                        img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
+                        count: "1",
+                    },
+
+
+
+
+
+
+
                 ],
             }
         },
@@ -141,7 +214,7 @@
     .search {
         display: flex;
         flex-direction: row;
-
+        width: 100%;
         & input {
             border-radius: 10px;
             height: 30px;
@@ -156,25 +229,38 @@
         }
 
         &_btn {
-            background: none;
             padding: 12px 20px;
             width: 65px;
             border-radius: 10px;
             margin-left: 15px;
             color: white;
-            background: #007bff;
+            background: linear-gradient(180deg, #4B3DA0 0%, rgba(31, 106, 175, 0.8) 100%);
             font-size: 15px;
             outline: none;
             cursor: pointer;
 
             &:hover {
-                background: #0062cc;
+                background: linear-gradient(0deg, #a791ed 0%, #6a00ff 100%);
             }
+        }
+    }
+
+    .remove {
+        border-radius: 5px;
+        padding: 5px 10px;
+        background: #dc3545;
+        border: none;
+        outline: none;
+        color: white;
+
+        &:hover {
+            background: #c82333;
         }
     }
 
     .add_input_btn {
         width: 120px;
+        margin-right: 25px;
     }
 
     .help_text {
@@ -191,6 +277,7 @@
 
     .btn_block {
         display: flex;
+        width: 100%;
     }
 
     .add {
@@ -211,18 +298,17 @@
         }
 
         &_btn {
-            background: none;
             width: 120px;
             padding: 12px 20px;
             border-radius: 10px;
             color: white;
-            background: #007bff;
+            background: linear-gradient(180deg, #4B1CD1 0%, rgba(25, 6, 79, 0.65) 100%);
             font-size: 15px;
             outline: none;
             cursor: pointer;
 
             &:hover {
-                background: #0062cc;
+                background: linear-gradient(0deg, #a791ed 0%, #6a00ff 100%);
             }
         }
     }
@@ -248,93 +334,63 @@
     .flex_box {
         display: flex;
         flex: 1 0;
-        justify-content: space-around;
+        justify-content: flex-start;
     }
 
     .table_block {
-        width: 100%;
-
-        &:first-child .table {
-            width: 80%;
-        }
+        margin-right: 20px;
+        height: 450px;
+        width: 420px;
+        overflow-y: scroll;
+        margin-left: 30px;
     }
 
     .table {
         border-collapse: collapse;
-        width: 100%;
+        position: relative;
         text-align: center;
 
         &_row:nth-child(even) {
             background-color: #dddddd;
+
+
         }
 
         &_data {
             border: 1px solid #dddddd;
+            padding: 8px 15px;
+            width: 100%;
+
+        }
+    }
+
+    .show {
+        margin-right: 20px;
+        width: 700px;
+        margin-left: 30px;
+
+        &_table {
+            border-collapse: collapse;
+            position: relative;
             text-align: center;
 
-            & img {
-                width: 130px;
-                height: 130px;
+            &_row {
+                &:nth-child(even) {
+                    background-color: #dddddd;
+                }
+
+                &_data {
+                    border: 1px solid #dddddd;
+                    padding: 8px 15px;
+                    width: 150px;
+                    height: 50px;
+                    & img{
+                        height: 250px;
+                        width: 250px;
+                        object-fit: cover;
+                    }
+                }
             }
-        }
-
-        &:last-child {
-            width: 100%;
-        }
-    }
-
-    .hide {
-        display: table-cell;
-    }
-
-    @media screen and (max-width: 768px) {
-        .hide {
-            display: none;
-        }
-        .sklad_title {
-            font-size: 25px;
-            margin-bottom: 20px;
-        }
-        .flex_box {
-            flex-direction: column;
-        }
-        .table_block {
-            width: 100%;
-
-            &:first-child .table {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-        }
-        .search {
-            flex-direction: column;
-
-            &_btn {
-                margin-left: 0;
-                margin-top: 20px;
-            }
-        }
-        .add {
-            margin: 20px 0;
-            padding: 0;
-
-            &_input_btn {
-                margin-right: 10px;
-            }
-        }
-    }
-
-    .add_input_btn {
-        width: 120px;
-    }
-
-    .creative {
-        flex-direction: column;
-    }
-
-    @media screen and (max-width: 576px) {
-        .sklad_title {
-            font-size: 22px;
         }
     }
 </style>

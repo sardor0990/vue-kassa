@@ -6,6 +6,9 @@
                     <div class="col">
                         <div class="count">
                             <div class="count_body">
+                                <div class="count_head">
+                                    <div>Доход</div>
+                                </div>
                                 <div class="count_title">
                                     <span>55555</span>
                                 </div>
@@ -16,9 +19,13 @@
                     <div class="col">
                         <div class="count">
                             <div class="count_body">
+                                <div class="count_head">
+                                    <div>Расход</div>
+                                </div>
                                 <div class="count_title">
                                     <span>5555555</span>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -26,6 +33,9 @@
                     <div class="col">
                         <div class="count third__count">
                             <div class="count_body">
+                                <div class="count_head">
+                                    <div>Прибыль</div>
+                                </div>
                                 <div class="count_title">
                                     <span>55555</span>
                                 </div>
@@ -39,16 +49,20 @@
                         <input type="date" name="dateofbirth" id="dateofbirth" class="mb date_input">
                     </div>
                     <div class="col second__row__second__col">
-                        <input type="date" name="dateofbirth" id="dateofbirth" class="mb date_input">
+                        <input type="date" name="dateofbirth" id="dateofbirth1" class="mb date_input">
                     </div>
 
                     <div class="col">
-                        <button class="submit"><i class="fas fa-search fa-2x"></i></button>
+                        <button class="submit"><i class="fas fa-search"></i> Поиск</button>
+                    </div>
+                    <div class="col">
+                        <button class="submit"><i class="fas fa-sliders-h"></i> Фильтр
+                        </button>
                     </div>
                 </div>
 
                 <div class="row third__row" style=" position:relative;">
-                    <div class="col first__column" style="width: 80%; height:  300px; margin-right: 10px;">
+                    <div class="col first__column" style="width: 80%; height:  343px; margin-right: 10px;">
                         <table style="width: 100%;">
                             <tr>
                                 <th>-</th>
@@ -69,11 +83,7 @@
                         </table>
                     </div>
 
-                    <div class="col" style="position:absolute; top: 0; right: 0; padding-right: 10px;">
-                        <button type="submit" class="btn btn-success">
-                            <i class="fas fa-sliders-h"></i> Филтр
-                        </button>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -88,206 +98,203 @@
                 list: [
                     {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
                     },
                     {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
                     },
                     {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
                     },
                     {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
-                    },{
+                    }, {
                         name: "qweqwe",
-                        date:"qweqwe",
+                        date: "qweqwe",
                         sum: "qweqwe",
 
                     },
-
-
-
 
 
                 ],
@@ -298,7 +305,11 @@
 
 <style lang="scss" scoped>
 
-
+.count_head{
+    font-size: 25px;
+    font-family: sans-serif;
+    margin-top: 15px;
+}
     .static {
         &_wrap {
             width: 1200px;
@@ -319,12 +330,10 @@
         justify-content: center;
     }
 
-    .count{
-        width: 380px;
-        border-right: 1px solid black;
+    .count {
+        width: 200px;
         padding: auto;
         margin-left: 30px;
-
         color: black;
         text-align: center;
 
@@ -332,15 +341,15 @@
             text-align: center;
             font-size: 24px;
             margin: 20px 0;
-            color: black;
+            color: white;
             font-family: sans-serif;
             height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(180deg, #631FA7 0%, rgba(106, 22, 98, 0.85) 100%);
+            border-radius: 20px;
+            padding-top: 20px;
         }
 
-        span{
+        span {
             display: inline-block;
             vertical-align: middle;
             line-height: normal;
@@ -349,9 +358,10 @@
     }
 
 
-    .third__count{
+    .third__count {
         border: none;
     }
+
     /* CALENDAR CSS */
 
     [type="date"] {
@@ -377,12 +387,19 @@
     }
 
     .submit {
-        background: #0069d9;
+        background: linear-gradient(180deg, #631FA7 0%, rgba(106, 22, 98, 0.85) 100%);
         color: #ffffff;
         padding: 10px 10px;
-        border: 1px solid #c4c4c4;
         border-radius: 5px;
         box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+        font-size: 30px;
+        margin-right: 20px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background: linear-gradient(0deg, #631FA7 0%, rgba(106, 22, 98, 0.85) 100%);
+        }
     }
 
     .second__row {

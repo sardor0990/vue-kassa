@@ -74,39 +74,6 @@
                                         <button class="delete_button">delete</button>
                                     </td>
                                 </tr>
-
-                                <tr>
-                                    <td>
-                                        <button class="percent_button">%</button>
-                                    </td>
-                                    <td>asdasdasd</td>
-                                    <td>55757</td>
-                                    <td>
-                                        <button class="delete_button">delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button class="percent_button">%</button>
-                                    </td>
-                                    <td>asdasdasd</td>
-                                    <td>55757</td>
-                                    <td>
-                                        <button class="delete_button">delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button class="percent_button">%</button>
-                                    </td>
-                                    <td>asdasdasd</td>
-                                    <td>55757</td>
-                                    <td>
-                                        <button class="delete_button">delete</button>
-                                    </td>
-                                </tr>
-
-
                             </table>
                         </div>
 
@@ -114,8 +81,6 @@
                             <div class="last__btns__chek__button"
                                  @click="showChek=true; ">chek
                             </div>
-
-
                             <div class="last__btns__count">14555</div>
                             <div id="demo"></div>
                         </div>
@@ -125,33 +90,37 @@
                 <!--procent modal-->
 
                 <transition name="fade" appear>
-                    <div class="modal-overlay" v-if="showModal" @click="showModal=false">
+                    <div class="modal-overlay" v-show="showModal" @click="showModal=false">
                     </div>
                 </transition>
 
                 <transition name="slide" appear>
-                    <div class="modal" v-if="showModal">
+                    <div class="modal" v-show="showModal">
+                        <div class="modal_header">
+                            Выберите скидку
+                        </div>
                         <div style="text-align: center;">
-                            <div class="modal__inner__content red">B</div>
+                            <div class="modal__inner__content red">Б</div>
                             <div class="modal__inner__content yellow">C</div>
                             <div class="modal__inner__content green">M</div>
                         </div>
                         <div style="text-align: center; margin-top: 10px;">
-                            <button @click="showModal=false" style="padding: 10px">Отправить</button>
+                            <button  style="padding: 10px; margin-right: 20px">Отправить</button>
+                            <button @click="showModal=false" style="padding: 10px">Отмена</button>
                         </div>
                     </div>
                 </transition>
                 <!--check modal-->
 
                 <transition name="fade" appear>
-                    <div class="modal-overlay" v-if="showChek" @click="showChek=false">
+                    <div class="modal-overlay" v-show="showChek" @click="showChek=false">
                     </div>
                 </transition>
 
                 <transition name="slide" appear>
-                    <div class="modal" v-if="showChek">
+                    <div class="modal" v-show="showChek">
                         <div style="text-align: center; margin-top: 10px;">
-                            <button @click="showChek=false" style="padding: 10px; margin-right: 100px;">Отправить
+                            <button style="padding: 10px; margin-right: 100px;">Отправить
                             </button>
                             <button @click="showChek=false" style="padding: 10px">Отмена</button>
                         </div>
@@ -168,7 +137,7 @@
         data() {
             return {
                 showModal: false,
-                showChek: true,
+                showChek: false,
             }
 
 
@@ -351,7 +320,11 @@
         background-color: #ffffff;
         border-radius: 16px;
         padding: 25px;
-
+        &_header{
+            margin-left: 40px;
+            line-height: 40px;
+            font-size: 20px;
+        }
     }
 
     .fade-enter-active,
