@@ -29,7 +29,7 @@
                         <td class="table_data">sdsdsdsd</td>
                         <td class="table_data">asdasdasdasd</td>
                         <td class="table_data">
-                            <button class="change"><i class="fas fa-pencil-alt"></i> Изменить</button>
+                            <button class="change" @click="showChange=true"><i class="fas fa-pencil-alt"></i> Изменить</button>
                         </td>
                         <td class="table_data">
                             <button class="remove"><i class="fas fa-trash-alt"></i> Удалить</button>
@@ -84,7 +84,57 @@
                                 </div>
 
                                 <div class="input_add">
-                                        <textarea type="text" class="textarea" name="disc" id="disc" placeholder="Введите описание"></textarea>
+                                    <textarea type="text" class="textarea" name="disc" id="disc" placeholder="Введите описание"></textarea>
+                                </div>
+                                <div style="margin-left: auto">
+                                    <button class="modal-send-btn">+ Добавить</button>
+                                </div>
+                            </div>
+                        </slot>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </transition>
+    <transition name="modal" v-show="showChange">
+        <div class="modal-mask">
+            <div class="modal-wrapper">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <slot name="header">
+                            <div>
+                              Изменить товар
+                            </div>
+                        </slot>
+                        <slot name="close">
+                            <div style="margin-left: auto">
+                                <button class="modal-btn" @click="showChange=false"><i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </slot>
+                    </div>
+                    <div class="modal-body">
+                        <slot name="body">
+                            <div>
+                                <div class="input_add" id="vue">
+                                    <input type="text" name="name" id="name" placeholder="Введите название">
+                                    <input type="text" inputmode="decimal" v-model="formattedCurrencyValue"
+                                           @blur="focusOut" @focus="focusIn" name="price" id="price"
+                                           placeholder="Введите Цена">
+                                </div>
+                                <div class="input_add">
+                                    <input type="number" min="0"  name="count" id="count" placeholder="Введите колличество">
+                                    <input type="number" min="0" name="percent" id="percent"
+                                           placeholder="Введите процент наценки">
+                                </div>
+                                <div class="input_add">
+                                    <input type="file" name="img" id="img">
+                                    <input type="number" min="0" name="minValue" id="minValue"
+                                           placeholder="Введите минимальную наценку">
+                                </div>
+
+                                <div class="input_add">
+                                    <textarea type="text" class="textarea" name="disc" id="disc" placeholder="Введите описание"></textarea>
                                 </div>
                                 <div style="margin-left: auto">
                                     <button class="modal-send-btn">+ Добавить</button>
@@ -104,6 +154,7 @@
         data() {
             return {
                 showModal: false,
+                showChange: false,
                 currencyValue: '',
                 formattedCurrencyValue: ""
             }
@@ -133,11 +184,9 @@
         width: 8px;
         height: 5px;
     }
-
     ::-webkit-scrollbar-track-piece {
         margin: 18px 5px
     }
-
     ::-webkit-scrollbar-thumb:vertical {
         height: 5px;
         background: #DCDCDC;
@@ -154,12 +203,10 @@
         display: table;
         transition: opacity 0.3s ease;
     }
-
     .modal-wrapper {
         display: table-cell;
         vertical-align: middle;
     }
-
     .modal-container {
         width: 500px;
         margin: 0px auto;
@@ -171,16 +218,13 @@
         font-family: Helvetica, Arial, sans-serif;
         height: 500px;
     }
-
     .modal-header {
         display: flex;
     }
-
     .input_add {
         margin-bottom: 20px;
         margin-left: 20px;
         display: flex;
-
         & input {
             margin-right: 10px;
             width: 100%;
@@ -190,7 +234,6 @@
             outline: none;
         }
     }
-
     .change {
         padding: 10px 15px;
         color: white;
@@ -199,17 +242,15 @@
         outline: none;
         border-radius: 30px;
         border: none;
-
         &:hover {
             background: #0069d9;
         }
-
     }
-.add_title{
-    font-size: 30px;
-    font-family: sans-serif;
-    margin: 20px 0;
-}
+    .add_title{
+        font-size: 30px;
+        font-family: sans-serif;
+        margin: 20px 0;
+    }
     .remove {
         background: #dc3545;
         padding: 10px 15px;
@@ -218,24 +259,19 @@
         outline: none;
         border-radius: 30px;
         border: none;
-
         &:hover {
             background: #c82333;
         }
     }
-
     .modal-header h3 {
         margin-top: 0;
         color: #42b983;
     }
-
     .modal-body {
         margin: 20px 0;
     }
-
     .modal-send-btn {
         display: inline-block;
-
         font-weight: 400;
         text-align: center;
         white-space: nowrap;
@@ -250,42 +286,34 @@
         color: #fff;
         background-color: #28a745;
         outline: none;
-
         &:hover {
             color: #fff;
             background-color: #218838;
             border-color: #1e7e34;
         }
     }
-
     .modal-btn {
         color: white;
         background: #dc3545;
         outline: none;
-
         &:hover {
             background: #c82333;
         }
     }
-
     .modal-default-button {
         float: right;
     }
-
     .modal-enter {
         opacity: 0;
     }
-
     .modal-leave-active {
         opacity: 0;
     }
-
     .modal-enter .modal-container,
     .modal-leave-active .modal-container {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
-
     .textarea {
         resize: none;
         width: 88%;
@@ -294,14 +322,11 @@
         padding: 20px;
         border-radius: 20px;
     }
-
     .wrap {
         display: flex;
     }
-
     .add {
         padding: 0 40px;
-
         &_btn {
             background: none;
             padding: 12px 20px;
@@ -312,42 +337,33 @@
             outline: none;
             cursor: pointer;
             margin-right: 30px;
-
             &:hover {
                 background: #0069d9;
             }
         }
     }
-
     .table_cont {
         overflow-y: scroll;
         width: 100%;
         height: 550px;
         border-radius: 25px;
     }
-
     .br:first-child {
         border-top-left-radius: 25px;
-
     }
-
     .br:last-child {
         border-top-right-radius: 20px;
     }
-
     .fix {
         width: 100%;
         position: sticky;
         height: 65px;
         border-radius: 20px;
-
     }
-
     .btn_mod {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-
         &_mb {
             width: 19px;
             padding: 25px 38px 25px 34px;
@@ -359,43 +375,34 @@
             cursor: pointer;
             margin-right: 20px;
         }
-
         &_text {
             font-size: 30px;
             font-family: sans-serif;
         }
     }
-
     .table {
         border-collapse: collapse;
         position: relative;
         width: 100%;
-
-
         &_row:nth-child(even) {
             background-color: #dddddd;
         }
-
         &_data {
             border: 1px solid #dddddd;
             text-align: center;
             padding: 8px;
-
             & img {
                 width: 50px;
                 height: 50px;
             }
         }
-
         &:last-child {
             width: 100%;
         }
     }
-
     .table:first-child .table_row {
         border-radius: 20px;
     }
-
     th {
         position: sticky;
         top: 0;
