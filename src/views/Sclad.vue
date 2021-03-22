@@ -360,7 +360,6 @@
         &_row:nth-child(even) {
             background-color: #dddddd;
 
-
         }
 
         &_data {
