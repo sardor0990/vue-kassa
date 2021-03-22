@@ -304,6 +304,20 @@
 </script>
 
 <style lang="scss" scoped>
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        margin: 18px 5px
+    }
+
+    ::-webkit-scrollbar-thumb:vertical {
+        height: 5px;
+        background: #DCDCDC;
+        border-radius: 40px;
+    }
 
 .count_head{
     font-size: 25px;
@@ -430,6 +444,5 @@
 
     .third__row .first__column {
         overflow-y: scroll;
-        padding-right: 10px;
     }
 </style>

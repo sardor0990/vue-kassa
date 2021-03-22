@@ -181,13 +181,6 @@
                         img: "https://i.pinimg.com/originals/4b/ba/6f/4bba6f4d487a8029817f63ff9101911d.jpg",
                         count: "1",
                     },
-
-
-
-
-
-
-
                 ],
             }
         },
@@ -200,6 +193,20 @@
 </script>
 
 <style lang="scss" scoped>
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        margin: 18px 5px
+    }
+
+    ::-webkit-scrollbar-thumb:vertical {
+        height: 5px;
+        background: #DCDCDC;
+        border-radius: 40px;
+    }
     .sklad {
         &_wrap {
             margin-top: 20px;

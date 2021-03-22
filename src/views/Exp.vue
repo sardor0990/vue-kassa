@@ -65,6 +65,20 @@
 </script>
 
 <style scoped lang="scss">
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        margin: 18px 5px
+    }
+
+    ::-webkit-scrollbar-thumb:vertical {
+        height: 5px;
+        background: #DCDCDC;
+        border-radius: 40px;
+    }
     .exp_list {
         display: flex;
 

@@ -73,13 +73,13 @@
                                            placeholder="Введите Цена">
                                 </div>
                                 <div class="input_add">
-                                    <input type="number" name="count" id="count" placeholder="Введите колличество">
-                                    <input type="number" name="percent" id="percent"
+                                    <input type="number" min="0"  name="count" id="count" placeholder="Введите колличество">
+                                    <input type="number" min="0" name="percent" id="percent"
                                            placeholder="Введите процент наценки">
                                 </div>
                                 <div class="input_add">
                                     <input type="file" name="img" id="img">
-                                    <input type="number" name="minValue" id="minValue"
+                                    <input type="number" min="0" name="minValue" id="minValue"
                                            placeholder="Введите минимальную наценку">
                                 </div>
 
@@ -129,6 +129,20 @@
 </script>
 
 <style scoped lang="scss">
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        margin: 18px 5px
+    }
+
+    ::-webkit-scrollbar-thumb:vertical {
+        height: 5px;
+        background: #DCDCDC;
+        border-radius: 40px;
+    }
     .modal-mask {
         position: fixed;
         z-index: 9998;
@@ -191,7 +205,11 @@
         }
 
     }
-
+.add_title{
+    font-size: 30px;
+    font-family: sans-serif;
+    margin: 20px 0;
+}
     .remove {
         background: #dc3545;
         padding: 10px 15px;
