@@ -1,52 +1,63 @@
 <template>
-    <div id="order">
-        <div class="order">
-            <div class="order_wrap">
-                <div class="row">
-                    <div class="col first__column ">
-                        <div class="name__of__order">imya zakaz</div>
+    <div>
 
-                        <div class="name__with__button">
-                            <div class="inner__name__with__button" v-for="(item , index) in order" :key="index" @click="openObj(index)">
-                                {{item.name}}
-                                <button >X</button>
-                            </div>
-
-                        </div>
-
-                        <div class="add__button" @click="showModal=true ">
-                            +
-                        </div>
+        <div class="container">
+            <div class="orders-col">
+                <div class="box">
+                    <div class="box__title">Заказы</div>
+                    <div class="user-box">
+                        <div class="user-box__name">Petrovich Jalla</div>
+                        <div class="user-box__delete"><i class="fas fa-times"></i></div>
                     </div>
+                </div>
+                <div>
+                    <div class="add-button">
+                        +
+                    </div>
+                </div>
+            </div>
 
-                    <div class="col right__column">
-                        <div class="right__column__inner">
-                            <div class="right__column__inner__name">{{obj.name}}</div>
-                            <div class="right__column__inner__textarea">
-                                {{obj.disc}}
-                            </div>
+            <div class="box">
+                <div class="box-name">
+                    <div class="box_text">Petrovich Jalla</div>
+                </div>
+                <div class="box-description">
+                    <div>
+                        <div class="box-description__title"> Описание:</div>
+                        <div class="box-description__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis deserunt dolor eius,
+                            esse
+                            et facere
+                            impedit iure laborum molestiae mollitia nisi nobis nostrum officia omnis, perferendis
+                            placeat
+                            repellat saepe
+                            unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet dicta dolor
+                            dolore
+                            eos non,
+                            tempore. Architecto autem, cupiditate id illo iste nisi nulla omnis quis ratione rem unde
+                            voluptatibus?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis deserunt dolor eius,
+                            esse
+                            et facere
+                            impedit iure laborum molestiae mollitia nisi nobis nostrum officia omnis, perferendis
+                            placeat
+                            repellat saepe
+                            unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet dicta dolor
+                            dolore
+                            eos non,
+                            tempore. Architecto auLorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+                            deserunt dolor
+                            eius, esse et facere
+                            impedit iure laborum molestiae mollitia nisi nobis nostrum officia omnis, perferendis
+                            placeat
+                            repellat saepe
+                            unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet dicta dolor
+                            dolore
+                            eos non,
+                            tempore. Architecto au
                         </div>
                     </div>
                 </div>
-
-                <transition name="fade" appear>
-                    <div class="modal-overlay" v-if="showModal" @click="showModal=false">
-                    </div>
-                </transition>
-
-                <transition name="slide" appear>
-                    <div class="modal" v-if="showModal">
-                        <div style="display: flex; flex-direction: column">
-                            <input type="text" name="name" placeholder="name"
-                                   style="border-radius: 40px;padding: 10px; margin-bottom: 10px;">
-                            <textarea name="disc" id="" cols="30" rows="10" placeholder="text"
-                                      style="border-radius: 10px;padding: 10px;"></textarea>
-                        </div>
-                        <div style="text-align: center; margin-top: 10px;">
-                            <button @click="showModal=false" style="padding: 10px">Отправить</button>
-                        </div>
-                    </div>
-                </transition>
             </div>
         </div>
     </div>
@@ -54,187 +65,145 @@
 
 <script>
     export default {
-        name: "",
-        data() {
-            return {
-                showModal: true ,
-                obj: {
-                    name: "",
-                    disc: "",
-                },
-                order: [
-                    {
-                        name: "1",
-                        disc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque consequuntur distinctio dolor dolores doloribus exercitationem fugiat ipsa iusto maiores molestias non porro quas, quia ratione sint temporibus unde velit?",
-                    },
-                    {
-                        name: "2",
-                        disc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque consequuntur distinctio dolor dolores doloribus exercitationem fugiat ipsa iusto maiores molestias non porro quas, quia ratione sint temporibus unde velit?",
-                    },
-                    {
-                        name: "3",
-                        disc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque consequuntur distinctio dolor dolores doloribus exercitationem fugiat ipsa iusto maiores molestias non porro quas, quia ratione sint temporibus unde velit?",
-                    },
-                    {
-                        name: "4",
-                        disc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque consequuntur distinctio dolor dolores doloribus exercitationem fugiat ipsa iusto maiores molestias non porro quas, quia ratione sint temporibus unde velit?",
-                    },
-                ],
-            }
+        name: 'Order'
 
-        },
-        methods: {
-            openObj(index) {
-                console.log(this.obj = this.order[index])
-            }
-        },
     }
+
 </script>
 
-<style lang="scss" scoped>
 
-
-    #order {
-        width: 100vw;
-        position: relative; /*  agar buni ochirsa overlay header ustidan boladi  */
-        height: 80%;
+<style scoped>
+    .box_text {
+        padding: 20px;
+        font-size: 25px;
     }
 
-    .order {
-        &_wrap {
-            width: 1200px;
-            margin: 0 auto;
-            overflow-x: hidden;
-        }
-
-        &_row {
-            display: flex;
-            align-items: center;
-            padding: 60px 0;
-            justify-content: center;
-        }
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 5px;
     }
 
-    .row {
+    ::-webkit-scrollbar-track-piece {
+        margin: 18px 5px
+    }
+
+    ::-webkit-scrollbar-thumb:vertical {
+        height: 5px;
+        background: #DCDCDC;
+        border-radius: 40px;
+    }
+
+    .container {
+      margin-top: 20px;
         display: flex;
-        align-items: center;
         justify-content: center;
     }
 
-    .first__column {
-        width: 300px;
+    .orders-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add-button {
+        width: 390px;
+        height: 100px;
         margin-top: 10px;
-    }
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    .name__of__order {
-        border: 1px solid grey;
-        padding: 20px;
-        text-align: center;
-        background: grey;
-        margin-bottom: 20px;
-    }
-
-    .name__with__button {
-        border: 1px solid black;
-        padding: 10px;
-        margin-bottom: 20px;
-        height: 300px;
-        overflow-y: scroll;
-
-        .inner__name__with__button {
-            border: 1px solid black;
-            text-align: right;
-            padding: 10px;
-            margin-bottom: 10px;
-            background: sandybrown;
-            button {
-                margin-left: 70px;
-                padding: 10px 20px;
-            }
-        }
-
-    }
-
-    .add__button {
-        text-align: center;
         cursor: pointer;
-        padding: 10px;
-        border: 1px solid black;
-        font-size: 52px;
-        background: #ff0000;
+        color: white;
+        font-size: 150px;
+        background: linear-gradient(180deg, #62257E 0%, rgba(20, 106, 185, 0.81) 100%);
+        border-radius: 20px;
     }
 
-    .right__column {
-        margin-left: 300px;
-        width: 400px;
-        min-height: 300px;
-        height: 100%;
+    .box {
+        margin: 5px 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 380px;
+        height: 480px;
 
-        .right__column__inner {
-            border: 1px solid black;
-            padding: 10px;
-
-            .right__column__inner__name {
-                border: 1px solid black;
-                padding: 10px;
-                background: lightblue;
-                margin-bottom: 10px;
-
-            }
-
-            .right__column__inner__textarea {
-                border: 1px solid black;
-                padding: 10px;
-                background: lightblue;
-                height: 100%;
-                min-height: 300px;
-            }
-
-        }
+        border: 5px #692CB6 solid;
+        border-radius: 30px;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
-    .modal-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 98;
-        background: rgba(0, 0, 0, 0.3);
+    .box__title {
+        margin: 5px 0 10px 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 45px;
+        color: black;
     }
 
-    .modal {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 99;
+    .user-box {
+        position: relative;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        width: 75%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.63) 100%);
+        border: 1px solid #302369;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 18px;
+    }
+
+    .user-box__name {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        color: black;
+    }
+
+    .user-box__delete {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+
+        cursor: pointer;
+        font-size: 28px;
+        color: white;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #4B1CD1 0%, rgba(25, 6, 79, 0.65) 100%);
+    }
+
+    .box-name {
+        padding: 5px;
         width: 100%;
-        max-width: 400px;
-        background-color: #ffffff;
-        border-radius: 16px;
-        padding: 25px;
-
+        font-weight: 700;
+        border-bottom: 2px solid #692CB6;
     }
 
-    .fade-enter-active,
-    .fade-leave-active {
-        transition: opacity 0.5s;
+    .box-description {
+        padding: 15px 20px;
     }
 
-    .fade-enter,
-    .fade-leave-to {
-        opacity: 0;
+    .box-description__title {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 10px;
     }
 
-    .slide-enter-active,
-    .slide-leave-active {
-        transition: transform 0.5s;
+    .box-description__text {
+        text-align: left;
+        font-size: 17px;
+
+        font-weight: 700;
     }
 
-    .slide-enter,
-    .slide-leave-to {
-        transform: translateY(-50%) translateX(100vw);
-    }
 
 </style>

@@ -1,106 +1,126 @@
 <template>
     <header id="header">
-        <!--<div class="header">
+        <div class="header">
             <div class="header_wrap">
+                <div class="header_wrap_cont_s">
+                    <div class="logo">
+                        <img src="../assets/logo.png" alt="">
+                    </div>
+                    <div class="header_wrap_cont_btn_d">
+                        <router-link style="text-decoration: none" to="/login">
+                            <div class="btn_exit"><i class="fas fa-sign-out-alt"></i></div>
+                        </router-link>
+                    </div>
+                </div>
                 <div class="header_wrap_cont">
                     <div class="header_wrap_cont_btn">
-                        <router-link style="text-decoration: none" to="/login"><div class="btn">Выйти</div></router-link>
+                        <router-link style="text-decoration: none" to="/Sclad">
+                            <div class="btn">Cклад</div>
+                        </router-link>
                     </div>
                     <div class="header_wrap_cont_btn">
-                        <router-link style="text-decoration: none" to="/Sclad"><div class="btn">Cклад</div></router-link>
-                    </div>
-                    <div class="header_wrap_cont_btn ">
-                        <router-link to="/Static" style="text-decoration: none"> <div class="btn">Статистика</div></router-link>
-                    </div>
-                    <div class="header_wrap_cont_btn">
-                        <router-link to="/Exp" style="text-decoration: none">  <div class="btn">Затраты</div>  </router-link>
+                        <router-link style="text-decoration: none" to="/static">
+                            <div class="btn">Статистика</div>
+                        </router-link>
                     </div>
                     <div class="header_wrap_cont_btn">
-                        <router-link to="/Userpage" style="text-decoration: none">  <div class="btn">Пробить</div>  </router-link>
+                        <router-link style="text-decoration: none" to="/exp">
+                            <div class="btn">Расходы</div>
+                        </router-link>
                     </div>
                 </div>
             </div>
-        </div>-->
-       <div class="user_header">
-           <div class="user_header_wrap">
-               <div class="user_header_wrap_cont">
-                   <div class="user_header_wrap_cont_btn">
-                       <router-link style="text-decoration: none" to="/login"><div class="user_btn">Выйти</div></router-link>
-                   </div>
-                   <div class="user_name">
-                       <div class="user_name_text">
-                           <h1 style="font-family: sans-serif;text-align: center; font-size: 30px ">
-                               Гена василий петрович
-                           </h1>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
+        </div>
     </header>
+
 </template>
 
 <script>
     export default {
         name: "Header",
-        props:{
-
-        },
+        props: {},
     }
 </script>
 
 <style lang="scss" scoped>
-    .header {
-        &_wrap {
-            width: 100%;
+    .logo {
+        width: 80px;
+        height: 80px;
 
-            &_cont {
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    .header {
+        font-family: sans-serif;
+        &_wrap {
+            display: flex;
+
+            .header_wrap_cont {
                 display: flex;
-                &_btn{
-                    width: 100%;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                margin-right: 116px;
+                &_s {
+                    display: flex;
+                    justify-content: flex-start;
+                }
+
+                &_btn {
+                    margin-right: 15px;
+                    .btn {
+                        background: linear-gradient(180deg, #4B3DA0 0%, rgba(31, 106, 175, 0.85) 100%);
+                        appearance: auto;
+                        margin-right: 20px;
+                        text-rendering: auto;
+                        color: white;
+                        letter-spacing: normal;
+                        word-spacing: normal;
+                        display: inline-block;
+                        text-align: center;
+                        align-items: flex-start;
+                        cursor: pointer;
+                        width: 200px;
+                        border-radius: 15px;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        font-size: 30px;
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        transition: all 0.4s ease-in;
+                        &:hover {
+                            background: linear-gradient(0deg, rgba(167, 145, 237, 1) 0%, rgba(106, 0, 255, 1) 100%);
+                        }
+                    }
                 }
             }
         }
     }
-.btn {
-    background: #007bff;
+    .header_wrap_cont_btn_d{
+        align-self: center;
+        margin-right: 10px;
+        width: 80px;
+    }
+.btn_exit{
+    margin-left: 10px;
+    appearance: auto;
+    text-rendering: auto;
+    color: black;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
     text-align: center;
-    padding: 50px;
-    font-size: 30px;
-    color: white;
-    border: 1px solid white;
-    border-radius: 25px;
+    align-items: flex-start;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 40px;
+    transition: all 0.4s ease-in;
     &:hover{
-        background: #0069d9;
-    }
-}
-    .user_header{
-      &_wrap{
-          &_cont{
-              display: flex;
-              &_btn{
-                  margin-right: auto;
-              }
-          }
-      }
-    }
-    .user_btn{
-        background: #dc3545;
-        text-align: center;
-        padding: 50px;
-        font-size: 30px;
-        color: white;
-        border: 1px solid white;
-        border-radius: 25px;
-    }
-    .user_name{
-        &_text{
-            padding:50px ;
-        }
-    }
-@media screen and (max-width: 768px){
-    .header_wrap_cont{
-        flex-direction: column;
+        transform: scale(1.2);
     }
 }
 </style>

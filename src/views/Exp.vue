@@ -5,8 +5,17 @@
                 <div class="exp_wrap_row">
                     <div class="title">
                         <h1 style="font-family: sans-serif">
-                            Затраты
+                            Расходы
                         </h1>
+                    </div>
+                    <div class="exp_list_sum">
+                        <div class="exp_list_block">
+                            <input class="exp_list_input" type="text" placeholder="Введите сумму">
+                            <div class="exp_list_buttons">
+                                <button class="exp_list_buttons_btn"><i class="fas fa-plus"></i> Добавить</button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="exp_list">
                         <div class="exp_select_block">
@@ -16,15 +25,7 @@
                                 <option class="exp_select_option">Шапокляк</option>
                             </select>
                         </div>
-                        <div class="exp_list_sum">
-                            <div class="exp_list_block">
-                                <input class="exp_list_input" type="text" placeholder="Введите сумму">
-                            </div>
-                            <div class="exp_list_buttons">
-                                <button class="exp_list_buttons_btn">Добавить</button>
-                                <button class="exp_list_buttons_btn">Удалить</button>
-                            </div>
-                        </div>
+
                         <div class="table">
                             <div class="table_block">
                                 <table class="table">
@@ -33,185 +34,20 @@
                                         <th class="table_data">Номер</th>
                                         <th class="table_data">Сумма</th>
                                         <th class="table_data">Дата</th>
+                                        <th class="table_data">Удалить</th>
                                     </tr>
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr>
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr>
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr>
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr>
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr>
 
                                     <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
+                                        <td class="table_data">asd</td>
+                                        <td class="table_data">asd</td>
+                                        <td class="table_data">asd</td>
+                                        <td class="table_data">asd</td>
+                                        <td class="table_data">
+                                            <button class="exp_list_buttons_rem"><i class="fas fa-trash-alt"></i>
+                                                Удалить
+                                            </button>
+                                        </td>
                                     </tr>
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr>
-
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr>
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr>
-
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr>
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr>
-
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr>
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr>
-
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr>
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr>
-
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr>
-                                    <tr class="table_row">
-                                        <th class="table_data">asdasdasf</th>
-                                        <th class="table_data">awshdfhdfh</th>
-                                        <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                        <th class="table_data">12.05.2021</th>
-                                    </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr> <tr class="table_row">
-                                    <th class="table_data">asdasdasf</th>
-                                    <th class="table_data">awshdfhdfh</th>
-                                    <th class="table_data">dsfhsdfhsdfhsdfh</th>
-                                    <th class="table_data">12.05.2021</th>
-                                </tr>
                                 </table>
                             </div>
                         </div>
@@ -229,15 +65,32 @@
 </script>
 
 <style scoped lang="scss">
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        margin: 18px 5px
+    }
+
+    ::-webkit-scrollbar-thumb:vertical {
+        height: 5px;
+        background: #DCDCDC;
+        border-radius: 40px;
+    }
     .exp_list {
         display: flex;
-&_sum{
-    align-self: center;
-    width: 30%;
-    margin-right: 20px;
-}
-        &_block {
 
+        &_sum {
+            align-self: center;
+            margin-right: 20px;
+        }
+
+        &_block {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
 
         &_input {
@@ -247,35 +100,46 @@
             padding: 3px 15px;
             font-size: 20px;
             outline: none;
+            border: 1px grey solid;
         }
 
         &_buttons {
             display: flex;
+            align-items: center;
 
             &_btn {
-                margin-top: 20px;
-                margin-left: auto;
-                margin-right: auto;
-                width: 120px;
+
+                margin-left: 20px;
+                margin-right: 20px;
                 padding: 12px 20px;
                 border-radius: 10px;
                 color: white;
-                background: #007bff;
-                font-size: 15px;
+                background: linear-gradient(180deg, #4B1CD1 0%, rgba(25, 6, 79, 0.65) 100%);
+                font-size: 20px;
                 outline: none;
                 cursor: pointer;
+                border: none;
 
                 &:hover {
                     background: #0062cc;
                 }
 
-                &:last-child {
-                    background: #dc3545;
-                    margin-left: auto;
-                    margin-right: auto;
-                    &:hover {
-                        background: #c82333;
-                    }
+
+            }
+
+            &_rem {
+                background: #dc3545;
+                margin-right: 20px;
+                padding: 12px 20px;
+                border-radius: 10px;
+                color: white;
+                font-size: 15px;
+                outline: none;
+                cursor: pointer;
+                border: none;
+
+                &:hover {
+                    background: #c82333;
                 }
             }
         }
@@ -288,17 +152,18 @@
         height: 400px;
         font-size: 30px;
         text-align: center;
-        &_block{
+
+        &_block {
             margin-right: 10px;
-            width: 60%;
         }
     }
+
     .table_block {
         width: 100%;
         height: 400px;
     }
 
-    .table{
+    .table {
         width: 100%;
         border-collapse: collapse;
         overflow-y: scroll;
@@ -311,6 +176,7 @@
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
+            width: 150px;
         }
     }
 
