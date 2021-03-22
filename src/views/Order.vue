@@ -7,7 +7,7 @@
                     <div class="box__title">Заказы</div>
                     <div class="user-box" v-for="(item, index) in order" :key="index" @click="openItem(index);">
                         <div class="user-box__name">{{item.name}}</div>
-                        <div class="user-box__delete"><i class="fas fa-times"></i></div>
+                        <div class="user-box__delete" @click="showDelete=true"><i class="fas fa-times"></i></div>
                     </div>
                 </div>
                 <div>
@@ -50,8 +50,34 @@
                                             <textarea name="desc" id="" cols="30" rows="10" placeholder="Введите заказ"></textarea>
                                         </div>
                                         <div class="body_btn">
-                                            <button class="btnm green">Да</button>
+                                            <button class="btnm green">Добавить</button>
                                             <button class="btnm red" @click="showClean=false">Отмена</button>
+                                        </div>
+                                    </div>
+                                </slot>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </transition>
+
+            <transition name="modal" v-show="showDelete">
+                <div class="modal-mask">
+                    <div class="modal-wrapper">
+                        <div class="modal-container">
+                            <div class="modal-header">
+                                <slot name="header">
+                                    <div>
+                                        Удалить?
+                                    </div>
+                                </slot>
+                            </div>
+                            <div class="modal-body">
+                                <slot name="body">
+                                    <div class="body">
+                                        <div class="body_btn">
+                                            <button class="btnm green">Да</button>
+                                            <button class="btnm red" @click="showDelete=false">Отмена</button>
                                         </div>
                                     </div>
                                 </slot>
@@ -71,6 +97,7 @@
         data() {
             return {
                 showClean: false,
+                showDelete: false,
                 isActive: false,
                 obj: {
                     name: "",
@@ -191,10 +218,12 @@
 
         background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.63) 100%);
         border: 1px solid #302369;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 18px;
 
-
+           &:active{
+               background: linear-gradient(180deg, #62257E 0%, rgba(20, 106, 185, 0.81) 100%);
+           }
     }
 
     .user-box__name {
@@ -259,7 +288,6 @@
     }
 
     .modal-wrapper {
-
         display: table-cell;
         vertical-align: middle;
     }
@@ -274,10 +302,13 @@
         transition: all 0.3s ease;
         font-family: Helvetica, Arial, sans-serif;
 
+        border: 3px #692CB6 solid;
+        border-radius: 30px;
     }
 
     .modal-header {
         display: flex;
+        font-size: 25px;
     }
 
     .modal-header {
@@ -328,6 +359,12 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+
+            ::placeholder{
+                font-size: 20px;
+                font-family: Noto Sans;
+                color: #B5B5B5;
+            }
         }
         textarea {
             width: 100%;
@@ -340,10 +377,23 @@
             resize: none;
 
             ::placeholder {
-                font-family: sans-serif;
-                font-size: 100px;
+                font-size: 20px;
+                font-family: Noto Sans;
+                color: #B5B5B5;
             }
         }
+    }
+
+    .body_input input::placeholder{
+        font-size: 20px;
+        font-family: Noto Sans;
+        color: #B5B5B5;
+    }
+
+    .body_input textarea::placeholder{
+        font-size: 20px;
+        font-family: Noto Sans;
+        color: #B5B5B5;
     }
 
     .body_btn {
@@ -365,7 +415,7 @@
         line-height: 1.5;
         border-radius: .25rem;
         transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-        margin-right: 20px;
+        margin-right: 10px;
         outline: none;
     }
 
