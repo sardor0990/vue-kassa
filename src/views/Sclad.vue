@@ -47,11 +47,11 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr class="table_row">
-                                    <td class="table_data">asdsd</td>
-                                    <td class="table_data">sdsdsd</td>
-                                    <td class="table_data">5555</td>
-                                    <td class="table_data">544</td>
+                                <tr class="table_row" v-for="(item, index) in $store.state.items" :key="index">
+                                    <td class="table_data">{{item.id}}</td>
+                                    <td class="table_data">{{item.name}}</td>
+                                    <td class="table_data">{{item.price}}</td>
+                                    <td class="table_data">{{item.count}}</td>
                                     <td class="table_data">
                                         <button class="change"><i class="fas fa-pencil-alt"></i></button>
                                     </td>
@@ -148,7 +148,21 @@
             focusIn() {
                 // Unformat display value before user starts modifying it
                 this.formattedCurrencyValue = this.currencyValue.toString()
+            },
+            getItemData() {
+                if (this.$store.state.items.length === 0) {
+                    this.$store.dispatch('getItems')
+                    console.log(this.$store.state.items)
+                }
+                // this.$store.commit('setItems', [0, 0, 0])
             }
+        },
+        // mounted() {
+        //     this.getItemData()
+        //
+        // },
+        created() {
+            this.getItemData()
         }
     }
 </script>
@@ -325,7 +339,7 @@
 
 
     .table_cont {
-        overflow-y: scroll;
+        overflow-y: visible;
         width: 100%;
         height: 550px;
         border-radius: 25px;

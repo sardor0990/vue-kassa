@@ -1,32 +1,30 @@
 import {createStore} from 'vuex'
 
-const BASE_URL = "http://127.0.0.1:8000/";
+const BASE_URL = "http://192.168.4.69:8000/";
 
 const store = createStore({
     state() {
         return {
-            item: null,
+            items: [],
+            myNum: 0
         }
     },
     actions: {
-        getItems(asd) {
-            fetch(`${BASE_URL}get_post/`)
+        getItems(store) {
+            store.commit('setItems', [1, 0]);
+            fetch(`${BASE_URL}get-item/?ordering=id&limit=20&offset=0`)
                 .then((res) => res.json())
                 .then((resJSON) => {
-                    asd.commit('updateItems', resJSON['results'])
+                    store.commit('setItems', resJSON['results'])
                 });
-        }
+        },
+
     },
     mutations: {
-        updateItems(state, item){
-            state.item = item
-        }
+        setItems(state, items) {
+            state.items = items;
+        },
     },
-    getters: {
-        allStorage(state) {
-            return state.item
-        }
-    }
 });
 
 export default store
