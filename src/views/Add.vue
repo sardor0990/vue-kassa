@@ -29,10 +29,10 @@
                         <td class="table_data">sdsdsdsd</td>
                         <td class="table_data">asdasdasdasd</td>
                         <td class="table_data">
-                            <button class="change" @click="showChange=true"><i class="fas fa-pencil-alt"></i> Изменить</button>
+                            <button class="change" @click="showChange=true"><i class="fas fa-pencil-alt"></i> </button>
                         </td>
                         <td class="table_data">
-                            <button class="remove"><i class="fas fa-trash-alt"></i> Удалить</button>
+                            <button class="remove"><i class="fas fa-trash-alt"></i></button>
                         </td>
                     </tr>
                     </tbody>
@@ -117,24 +117,24 @@
                         <slot name="body">
                             <div>
                                 <div class="input_add" id="vue">
-                                    <input type="text" name="name" id="name" placeholder="Введите название">
+                                    <input type="text" name="name" id="name1" placeholder="Введите название">
                                     <input type="text" inputmode="decimal" v-model="formattedCurrencyValue"
-                                           @blur="focusOut" @focus="focusIn" name="price" id="price"
+                                           @blur="focusOut" @focus="focusIn" name="price" id="price1"
                                            placeholder="Введите Цена">
                                 </div>
                                 <div class="input_add">
-                                    <input type="number" min="0"  name="count" id="count" placeholder="Введите колличество">
-                                    <input type="number" min="0" name="percent" id="percent"
+                                    <input type="number" min="0"  name="count" id="count1" placeholder="Введите колличество">
+                                    <input type="number" min="0" name="percent" id="percent1"
                                            placeholder="Введите процент наценки">
                                 </div>
                                 <div class="input_add">
-                                    <input type="file" name="img" id="img">
-                                    <input type="number" min="0" name="minValue" id="minValue"
+                                    <input type="file" name="img" id="img1">
+                                    <input type="number" min="0" name="minValue" id="minValue1"
                                            placeholder="Введите минимальную наценку">
                                 </div>
 
                                 <div class="input_add">
-                                    <textarea type="text" class="textarea" name="disc" id="disc" placeholder="Введите описание"></textarea>
+                                    <textarea type="text" class="textarea" name="disc" id="disc1" placeholder="Введите описание"></textarea>
                                 </div>
                                 <div style="margin-left: auto">
                                     <button class="modal-send-btn">+ Добавить</button>
@@ -161,21 +161,19 @@
         },
         methods: {
             focusOut() {
-                // Recalculate the currencyValue after ignoring "$" and "," in user input
                 this.currencyValue = parseFloat(this.formattedCurrencyValue.replace(/[^\d.]/g, ""))
-                // Ensure that it is not NaN. If so, initialize it to zero.
-                // This happens if user provides a blank input or non-numeric input like "abc"
                 if (isNaN(this.currencyValue)) {
                     this.currencyValue = 0
                 }
                 // Format display value based on calculated currencyValue
-                this.formattedCurrencyValue = this.currencyValue.toFixed(2).replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1,")
+                this.formattedCurrencyValue = this.currencyValue.toFixed().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1,")
             },
             focusIn() {
                 // Unformat display value before user starts modifying it
                 this.formattedCurrencyValue = this.currencyValue.toString()
-            }
-        }
+            },
+        },
+
     }
 </script>
 
@@ -185,7 +183,7 @@
         height: 5px;
     }
     ::-webkit-scrollbar-track-piece {
-        margin: 18px 5px
+        margin: 0 5px
     }
     ::-webkit-scrollbar-thumb:vertical {
         height: 5px;
@@ -321,6 +319,7 @@
         font-size: 20px;
         padding: 20px;
         border-radius: 20px;
+        outline: none;
     }
     .wrap {
         display: flex;
