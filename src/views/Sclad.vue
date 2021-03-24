@@ -10,10 +10,10 @@
                     </div>
                     <div class="creative">
                         <div class="search">
-                            <input type="text" placeholder="Поиск" v-model="search">
+                            <input type="text" placeholder="Поиск" v-model="query" >
                             <div class="btn_block">
                                 <div class="add_input_btn">
-                                    <div class="search_btn" @click="getSearchData()"><i class="far fa-search"></i> Поиск</div>
+                                    <div class="search_btn" @click="getSearchData"><i class="far fa-search"></i> Поиск</div>
                                 </div>
                                 <div class="add">
                                     <div class="add_input_btn" @click="showModal=true">
@@ -55,9 +55,9 @@
                                     <td class="table_data">
                                         <button class="change"><i class="fas fa-pencil-alt"></i></button>
                                     </td>
-                                    <!--<td class="table_data">-->
-                                        <!--<button class="remove"><i class="fas fa-trash-alt"></i></button>-->
-                                    <!--</td>-->
+                                   <!-- <td class="table_data">
+                                        <button class="remove"><i class="fas fa-trash-alt"></i></button>
+                                    </td>-->
                                 </tr>
                                 </tbody>
                             </table>
@@ -129,7 +129,13 @@
                 showModal: false,
                 currencyValue: '',
                 formattedCurrencyValue: "",
-
+                query: "",
+            }
+        },
+        watch: {
+            query(param) {
+                this.$store.state.query = param
+                this.getSearchData()
             }
         },
         methods: {
@@ -153,19 +159,14 @@
                     this.$store.dispatch('getItems')
                     console.log(this.$store.state.items)
                 }
-                // this.$store.commit('setItems', [0, 0, 0])
-
             },
             getSearchData() {
-                if (this.$store.state.query.length === 0){
-                    this.$store.dispath('getSearch')
-                    console.log(this.$store.state.query)
-                }
+                this.$store.dispatch('getItems');
             },
 
         },
         created() {
-            this.getItemData()
+            this.getItemData();
         }
     }
 </script>
@@ -342,7 +343,7 @@
 
 
     .table_cont {
-        overflow-y: visible;
+        overflow-y: scroll;
         width: 100%;
         height: 550px;
         border-radius: 25px;
