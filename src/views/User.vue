@@ -54,8 +54,8 @@
                                 </thead>
                                 <tbody>
                                 <tr class="сheck_table_row">
-                                    <td class="сheck_table_data">
-                                        <button class="table_data_btn"><i class="fas fa-percent" @click="showModal=true"></i></button>
+                                    <td class="сheck_table_data" @click="showModal=true">
+                                        <button class="table_data_btn"><i class="fas fa-percent" ></i></button>
                                     </td>
                                     <td class="сheck_table_data">Номер</td>
                                     <td class="сheck_table_data">Цена</td>
@@ -71,8 +71,8 @@
                                 <div class="text">
                                     <span>Итог</span>:<span>12345</span>
                                 </div>
-                                <div class="сheck_give">
-                                    <button class="check_btn" @click="showChek=true">Счет</button>
+                                <div class="сheck_give" @click="showChek=true">
+                                    <button class="check_btn" >Счет</button>
                                 </div>
                             </div>
                         </div>
