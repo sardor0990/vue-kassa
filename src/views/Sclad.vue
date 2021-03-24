@@ -10,10 +10,10 @@
                     </div>
                     <div class="creative">
                         <div class="search">
-                            <input type="text" placeholder="Поиск">
+                            <input type="text" placeholder="Поиск" v-model="search">
                             <div class="btn_block">
                                 <div class="add_input_btn">
-                                    <div class="search_btn"><i class="far fa-search"></i> Поиск</div>
+                                    <div class="search_btn" @click="getSearchData()"><i class="far fa-search"></i> Поиск</div>
                                 </div>
                                 <div class="add">
                                     <div class="add_input_btn" @click="showModal=true">
@@ -37,7 +37,7 @@
                         <div class="table_cont">
                             <table class="table">
                                 <thead>
-                                <tr class="table_row fix">
+                                <tr class="table_row fix" >
                                     <th class="table_data br">Номер</th>
                                     <th class="table_data">Наименование</th>
                                     <th class="table_data">Цена</th>
@@ -63,9 +63,7 @@
                             </table>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -98,12 +96,12 @@
                                 </div>
                                 <div class="input_add">
                                     <input type="number" min="0"  name="count" id="count" placeholder="Введите колличество">
-                                    <input type="number" min="0" name="percent" id="percent"
+                                    <input type="number" min="0" max="100" name="percent" id="percent"
                                            placeholder="Введите процент наценки">
                                 </div>
                                 <div class="input_add">
                                     <input type="file" name="img" id="img">
-                                    <input type="number" min="0" name="minValue" id="minValue"
+                                    <input type="number" min="0" max="100" name="minValue" id="minValue"
                                            placeholder="Введите минимальную наценку">
                                 </div>
 
@@ -130,7 +128,8 @@
             return {
                 showModal: false,
                 currencyValue: '',
-                formattedCurrencyValue: ""
+                formattedCurrencyValue: "",
+
             }
         },
         methods: {
@@ -155,12 +154,16 @@
                     console.log(this.$store.state.items)
                 }
                 // this.$store.commit('setItems', [0, 0, 0])
-            }
+
+            },
+            getSearchData() {
+                if (this.$store.state.query.length === 0){
+                    this.$store.dispath('getSearch')
+                    console.log(this.$store.state.query)
+                }
+            },
+
         },
-        // mounted() {
-        //     this.getItemData()
-        //
-        // },
         created() {
             this.getItemData()
         }
