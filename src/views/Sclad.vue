@@ -10,10 +10,10 @@
                     </div>
                     <div class="creative">
                         <div class="search">
-                            <input type="text" placeholder="Поиск">
+                            <input type="text" placeholder="Поиск" v-model="query" >
                             <div class="btn_block">
                                 <div class="add_input_btn">
-                                    <div class="search_btn"><i class="far fa-search"></i> Поиск</div>
+                                    <div class="search_btn" @click="getSearchData"><i class="far fa-search"></i> Поиск</div>
                                 </div>
                                 <div class="add">
                                     <div class="add_input_btn" @click="showModal=true">
@@ -37,7 +37,7 @@
                         <div class="table_cont">
                             <table class="table">
                                 <thead>
-                                <tr class="table_row fix">
+                                <tr class="table_row fix" >
                                     <th class="table_data br">Номер</th>
                                     <th class="table_data">Наименование</th>
                                     <th class="table_data">Цена</th>
@@ -55,17 +55,15 @@
                                     <td class="table_data">
                                         <button class="change"><i class="fas fa-pencil-alt"></i></button>
                                     </td>
-                                    <!--<td class="table_data">-->
-                                        <!--<button class="remove"><i class="fas fa-trash-alt"></i></button>-->
-                                    <!--</td>-->
+                                   <!-- <td class="table_data">
+                                        <button class="remove"><i class="fas fa-trash-alt"></i></button>
+                                    </td>-->
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -98,12 +96,12 @@
                                 </div>
                                 <div class="input_add">
                                     <input type="number" min="0"  name="count" id="count" placeholder="Введите колличество">
-                                    <input type="number" min="0" name="percent" id="percent"
+                                    <input type="number" min="0" max="100" name="percent" id="percent"
                                            placeholder="Введите процент наценки">
                                 </div>
                                 <div class="input_add">
                                     <input type="file" name="img" id="img">
-                                    <input type="number" min="0" name="minValue" id="minValue"
+                                    <input type="number" min="0" max="100" name="minValue" id="minValue"
                                            placeholder="Введите минимальную наценку">
                                 </div>
 
@@ -130,7 +128,14 @@
             return {
                 showModal: false,
                 currencyValue: '',
-                formattedCurrencyValue: ""
+                formattedCurrencyValue: "",
+                query: "",
+            }
+        },
+        watch: {
+            query(param) {
+                this.$store.state.query = param
+                this.getSearchData()
             }
         },
         methods: {
@@ -154,15 +159,14 @@
                     this.$store.dispatch('getItems')
                     console.log(this.$store.state.items)
                 }
-                // this.$store.commit('setItems', [0, 0, 0])
-            }
+            },
+            getSearchData() {
+                this.$store.dispatch('getItems');
+            },
+
         },
-        // mounted() {
-        //     this.getItemData()
-        //
-        // },
         created() {
-            this.getItemData()
+            this.getItemData();
         }
     }
 </script>
@@ -339,7 +343,7 @@
 
 
     .table_cont {
-        overflow-y: visible;
+        overflow-y: scroll;
         width: 100%;
         height: 550px;
         border-radius: 25px;

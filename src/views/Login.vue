@@ -7,11 +7,11 @@
                         <div class="form__container">
                             <form>
                                 <div class="form__input">
-                                    <input type="text" placeholder="Введите имя" required>
+                                    <input type="text" placeholder="Введите имя">
                                 </div>
 
                                 <div class="form__input">
-                                    <input type="password" name="password" placeholder="Введите пороль" re>
+                                    <input type="password" name="password" placeholder="Введите пороль" >
                                 </div>
                                 <div style="text-align: center">
                                     <button @click="submit__form" class="login__button">Войти</button>
